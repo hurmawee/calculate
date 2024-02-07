@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+.container{
+    background-color: #7e98b9;
+
+    width: 1000px;
+
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 15px;
+    box-shadow: rgba(126, 152, 185, 0.41) 15px 15px 10px;
+    padding: 15px;
+}
+.inputBox{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: #212425 5px 5px 2px;
+    margin: 0 0 10px;
+}
+.display{
+    width: 90%;
+    height: 90px;
+
+    padding: 10px;
+
+    font: 3em Roboto;
+    border-radius: 0 0 10px 10px;
+
+    border: none;
+    outline: none;
+    cursor: default;
+    color: #19436c;
+
+
+}
+.lastValue{
+    display: block;
+
+    background-color: white;
+    width: 100%;
+    transition: 0.5s;
+    font: 2em Roboto;
+    text-align: right;
+    padding: 8px;
+    border-radius: 10px 10px 0 0;
+    color: #89a3d3;
+
+    cursor: default;
+}
+.deleteButton{
+
+    background-repeat: no-repeat;
+    background-image: url("dark.svg");
+    background-size: 100%;
+
+    width: 90px;
+    height: 53px;
+
+    display: block;
+    position: absolute;
+    right: 45px;
+    top: 45px;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0.8;
+}
+
+.deleteButton:hover{
+    opacity: 1;
+}
+.deleteButton:active{
+    transform: translateY(5px);
+}
+.buttonBox{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+.rectangleButton{
+    width: 180px;
+    height: 90px;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: #212425 5px 5px 2px;
+}
+.rectangleButton:hover{
+    transform: translateY(5px);
+}
+.numberBox,
+.operationBox{
+    display: grid;
+    gap: 12px;
+}
+
+.numberBox{ grid-template-columns: repeat(3, 1fr);}
+.operationBox{ grid-template-columns: repeat(2, 1fr); }
+
+.numberBox .rectangleButton{
+    color: #19436c;
+    background-color: #e4e6e8;
+    font: 5em Roboto;
+    text-align: center;
+}
+.operationBox .rectangleButton{
+    color: white;
+    background-color: #19436c;
+    font: 5em Roboto;
+    text-align: center;
+}
